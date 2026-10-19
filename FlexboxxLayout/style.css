@@ -1,0 +1,178 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #2d6a4f;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #1b4332;
+    padding: 12px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.navigation a:hover {
+    background-color: #40916c;
+}
+
+.main-container {
+    display: flex;
+    gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 25px auto;
+    padding: 0 20px;
+    align-items: flex-start;
+}
+
+.content {
+    flex: 3;
+    min-width: 0;
+}
+
+.welcome {
+    background-color: #d8f3dc;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.welcome h2 {
+    color: #2d6a4f;
+    margin-bottom: 8px;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.article-card {
+    background-color: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.article-card h3 {
+    color: #2d6a4f;
+    margin-bottom: 8px;
+}
+
+.article-card a {
+    display: inline-block;
+    color: #2d6a4f;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.article-card a:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sidebar-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-box h3 {
+    color: #2d6a4f;
+    margin-bottom: 10px;
+}
+
+.sidebar-box ul {
+    padding-left: 20px;
+}
+
+.footer {
+    background-color: #1b4332;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive cho máy tính bảng và điện thoại */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .content,
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar {
+        min-width: 0;
+    }
+}
+
+/* Responsive cho điện thoại màn hình nhỏ */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .navigation a {
+        display: block;
+    }
+
+    .main-container {
+        padding: 0 12px;
+        margin: 16px auto;
+    }
+
+    .welcome,
+    .article-card,
+    .sidebar-box {
+        padding: 16px;
+    }
+}
